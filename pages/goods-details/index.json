@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "雪宝",
+  "usingComponents": {
+    "poster": "wxa-plugin-canvas/poster"
+  }
+}

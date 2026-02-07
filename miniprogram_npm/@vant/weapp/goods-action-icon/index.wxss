@@ -1,0 +1,23 @@
+@import '../common/index.wxss';
+.van-goods-action-icon
+{display:-webkit-flex!important;display:flex!important;
+-webkit-flex-direction:column;
+flex-direction:column;
+-webkit-justify-content:center!important;
+justify-content:center!important;
+line-height:1!important;
+border:none!important;
+font-size:var(--goods-action-icon-font-size,30rpx)!important;
+color:#ff0000!important;
+margin-left:var(--goods-action-icon-width,0rpx);
+margin-top:var(--goods-action-icon-width,0px);
+color:var(--goods-action-icon-text-color,#000000)!important;
+width:var(--goods-action-icon-height,148rpx)!important;
+height:var(--goods-action-icon-height,26px)!important}
+
+.van-goods-action-icon__icon
+{display:-webkit-flex;
+  display:flex;margin:0 auto;color:#333232;
+  color:var(--goods-action-icon-color,#ff0000);
+  font-size:30rpx;
+  font-size:var(--goods-action-icon-size,30rpx)}

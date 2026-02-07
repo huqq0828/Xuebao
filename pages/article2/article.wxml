@@ -1,0 +1,13 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="article-warp">
+  <view class="article-content">  
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+  <action-sheet-item>
+    <view class="login-profile">登录后才能进行本次操作</view>
+    <button type="primary" class="login-float-btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权登录</button>
+  </action-sheet-item>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

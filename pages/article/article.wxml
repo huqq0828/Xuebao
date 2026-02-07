@@ -1,0 +1,21 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="header-box">
+  <image class="avatar" src="{{ articleDetail.pic }}" mode="aspectFill"></image>
+	<view class="r">
+    <view class="nick">{{ articleDetail.title }}</view>
+  </view>
+</view>
+<view class="article-warp">
+  <view class="article-content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+<image class="img1" src="cloud://huqq-4grafodl1eec3739.6875-huqq-4grafodl1eec3739-1304293882/教练个人.png"></image>
+<image class="img2" src="cloud://huqq-4grafodl1eec3739.6875-huqq-4grafodl1eec3739-1304293882/教练个人2.png"></image>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+  <action-sheet-item>
+    <view class="login-profile">登录后才能进行本次操作</view>
+    <button type="primary" class="login-float-btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权登录</button>
+  </action-sheet-item>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

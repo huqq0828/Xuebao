@@ -1,0 +1,18 @@
+<!-- 搜索框 开始 -->
+<van-search value="{{ name }}" placeholder="搜索" shape="round" bind:search="bindconfirm" />
+
+<!-- tab 开始 -->
+<van-tabs bind:change="tabClick" class="tab" style="position: relative;top: 38rpx">
+  <van-tab wx:for="{{tabs}}" wx:key="index" title="{{item}}"></van-tab>
+</van-tabs>
+<!-- 推荐 开始 wx:if="{{activeIndex == 0}}"-->
+<view class="koulingcoupon">
+  <view class="aritcle-list" style="position: relative; top: 40rpx">
+    <navigator wx:for="{{articleList}}" wx:key="{{item.id}}" hover-class='none' class="article-item" url='../article3/article?id={{item.id}}'>
+      <image class="article-cover" mode='aspectFill' src='{{item.pic}}' style="position: relative; left: 0rpx; top: 18rpx"></image>
+    </navigator>
+  </view>
+</view>
+
+
+

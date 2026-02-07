@@ -1,0 +1,74 @@
+<!-- 登录 -->
+<view class="page"> 
+  <view class="header-box">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 请登录 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请登录 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="r"><text  class="nick">{{userInfo.nickName}}</text>  </view>
+      <image class="i3" src="/images/2.png" style="left: 187rpx; top: 111rpx"></image>
+    </block>
+  </view>
+</view>
+
+<view class="page"> 
+<view class="container">
+  <image src="cloud://huqq-4grafodl1eec3739.6875-huqq-4grafodl1eec3739-1304293882/i11.png" class="i1"></image>
+</view>
+
+  <!-- 会员 -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link url="">
+    <image class="icon" src="/images/share/hy.png"></image>
+    <view class="cell-text">我的会员</view>
+  </van-cell>
+</view> 
+  <!-- 订单 -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link url="/pages/order-list/index">
+    <image class="icon" src="/images/share/dd.png"></image>
+    <view class="cell-text">我的订单</view>
+  </van-cell>
+</view>  
+<!-- 雪币 -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link url="">
+    <image class="icon" src="/images/share/jb.png"></image>
+    <view class="cell-text">我的雪币</view>
+  </van-cell>
+</view>  
+<!-- 预约  -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link url="/pages/goods/fav">
+    <image class="icon" src="/images/share/yy.png"></image>
+    <view class="cell-text">我的预约</view>
+  </van-cell>
+</view>  
+<!-- 客服 -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link>
+    <image class="icon" src="/images/share/kf.png"></image>
+      <van-goods-action-icon text="客服服务"  open-type="contact"
+        send-message-title="{{goodsDetail.basicInfo.name}}" send-message-img="{{goodsDetail.basicInfo.pic}}"
+        send-message-path="/pages/goods-details/index?id={{goodsDetail.basicInfo.id}}" show-message-card="{{ true }}" />
+  </van-cell>
+</view>
+  <!-- 关于 -->
+<view style="border-top:4rpx solid #dddddd;">
+  <van-cell is-link url="/pages/about/index">
+    <image class="icon" src="/images/share/gy.png"></image>
+    <view class="cell-text">关于我们</view>
+  </van-cell>
+</view>
+  <!-- 当前版本 -->
+<view style="border-bottom:4rpx solid #dddddd;border-top:4rpx solid #dddddd;">
+  <van-cell >
+    <image class="icon" src="/images/share/bb.png"></image>
+    <view class="cell-text2">{{version}}</view>
+    <view class="cell-text">当前版本</view>
+  </van-cell>
+</view>
+<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
+</view>

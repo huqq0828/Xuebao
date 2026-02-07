@@ -1,0 +1,97 @@
+<!-- 搜索框 开始 -->
+<van-search value="{{ name }}" placeholder="搜索" shape="round" bind:search="bindconfirm" />
+<!-- tab 开始 -->
+<van-tabs bind:change="tabClick" class="tab" style="position: relative;top: 38rpx">
+  <van-tab wx:for="{{tabs}}" wx:key="index" title="{{item}}"></van-tab>
+</van-tabs>
+<!-- 推荐 开始 -->
+<view class="coupons" wx:if="{{activeIndex == 0}}" style="position: relative;top:48rpx">
+  <view class="swiper-container">
+  <swiper class="swiper1"  indicator-active-color="#fff" autoplay="true" circular interval="3000" duration="500">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="swiper-imgs">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <image src="cloud://huqq-4grafodl1eec3739.6875-huqq-4grafodl1eec3739-1304293882/2.jpg" style="width: 720rpx; height: 350rpx; position: relative; left: -15rpx;top:10rpx"></image>
+  <view class="coupons2">
+     <image src="cloud://huqq-4grafodl1eec3739.6875-huqq-4grafodl1eec3739-1304293882/3.jpg" style="width: 700rpx; height: 369rpx"></image>
+  </view>
+</view>
+</view>
+<!-- 商城 开始 -->
+<view wx:if="{{activeIndex == 1}}">
+  <view class="filters" style="position: relative; left: 0rpx; top: 33rpx">
+    <view class="item {{orderBy=='addedDown'?'active':''}}" data-val="addedDown" bindtap="filter" style="position: relative; left: 15rpx;">全部</view>
+    <view class="item {{orderBy=='ordersDown'?'active':''}}" data-val="ordersDown" bindtap="filter" style="position: relative; left: 42rpx;">双11晒单</view>
+    <view class="item {{orderBy=='priceUp'?'active':''}}" data-val="priceUp" bindtap="filter" style="position: relative; left: 54rpx;">装备</view>
+    <view class="item {{orderBy=='priceUp1'?'active':''}}" data-val="priceUp1" bindtap="filter" style="position: relative; left: 66rpx;">二手</view>
+    <view class="item {{orderBy=='priceUp2'?'active':''}}" data-val="priceUp2" bindtap="filter" style="position: relative; left: 78rpx;">租赁</view>
+    <image src="/images/1.2.png" class="u1" style="width: 32rpx; height: 30rpx; position: relative; left: 100rpx; top: 10rpx"></image>
+  </view>
+  <view class="coupons3">
+    <view class="container">
+      <view class="goods-container" style="display:flex;float:bottom;top:3rpx">
+         <view class="goods-box" wx:for="{{goods}}" mode='widthFix' wx:key="id" bindtap="toDetailsTap" data-id="{{item.id}}">
+            <view class="img-box" mode='widthFix'>
+              <image style="position: relative; left: 3rpx; top: 0rpx"  src="{{item.pic}}"  mode="aspectFill"  lazy-load="true" class="u5" />
+            </view>
+            <view class="goods-title2">{{item.tags}}</view>
+            <image src='/images/u1.png' class="i1"></image>
+            <view class="goods-title">{{item.name}}</view>
+            <image src='/assets/icons/like_active.png' class="i2"></image>
+         </view>
+  </view>  
+  <view hidden="{{loadingMoreHidden ? true : false}}" class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多啦</view>
+  </view>
+    </view>
+  </view>
+</view>
+<!-- 雪场 开始 -->
+<view class="koulingcoupon" wx:if="{{activeIndex == 2}}">
+  <view class="aritcle-list" style="position: relative; top: 40rpx">
+    <navigator wx:for="{{articleList}}" wx:key="{{item.id}}" hover-class='none' class="article-item" url='../article2/article?id={{item.id}}'>
+      <image class="article-cover" mode='aspectFill' src='{{item.pic}}'></image>
+      <view class="article-info">
+        <text class="description">{{item.title}}</text>
+        <text class="description2">{{item.descript}}</text>
+        <view class="views">
+          <image src='../../assets/icons/views_gray.png'></image>{{item.views}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<!-- 教练 开始 -->
+<view class="koulingcoupon" wx:if="{{activeIndex == 3}}">
+  <view class="aritcle-list" style="position: relative; top: 40rpx">
+    <navigator wx:for="{{articleList2}}" wx:key="{{item.id}}" hover-class='none' class="article-item" url='../article/article?id={{item.id}}'>
+      <image class="article-cover" mode='aspectFill' src='{{item.pic}}'></image>
+      <view class="article-info">
+        <text class="description" >{{item.title}}</text>
+        <image src='/images/v1.png' style="width: 32rpx; height: 40rpx;position: relative;top: 5rpx"></image>
+        <text class="description3" style="display: block; left: 4rpx; top: -15rpx; width: 138rpx;">{{item.author}}</text>
+        <text class="description2"  style="display: block; top: -15rpx">{{item.descript}}</text>
+        <image src='/images/ckxq.png' style="width: 100rpx; height: 25rpx;display: flex;float:top;margin-left:340rpx"></image>
+        <image src='/images/yy.png' style="width: 73rpx; height: 36rpx;display: flex;float:bottom;margin-left:340rpx;margin-top:15rpx;margin-bottom:20rpx"></image>
+      </view>
+    </navigator>
+  </view>
+</view>
+<!-- 活动 开始 -->
+<view class="koulingcoupon" wx:if="{{activeIndex == 4}}">
+  <view class="aritcle-list" style="position: relative; top: 40rpx">
+    <navigator wx:for="{{articleList3}}" wx:key="{{item.id}}" hover-class='none' class="article-item" url='../article3/article?id={{item.id}}'>
+      <image class="article-cover" mode='aspectFill' src='{{item.pic}}'></image>
+      <view class="article-info">
+        <text class="description" >{{item.title}}</text>
+        <image src='/images/sl.png' style="width: 27rpx; height: 7rpx;display: flex;float:right;margin-top:15rpx;"></image>
+        <text class="description2"  style="display: block; top: -15rpx">{{item.descript}}</text>
+        <image src='/images/ckxq.png' style="width: 100rpx; height: 25rpx;display: flex;float:top;margin-left:340rpx"></image>
+        <image src='/images/bm.png' style="width: 73rpx; height: 36rpx;display: flex;float:bottom;margin-left:340rpx;margin-top:15rpx;margin-bottom:20rpx"></image>
+      </view>
+    </navigator>
+  </view>
+</view>
+

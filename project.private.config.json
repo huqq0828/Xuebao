@@ -1,0 +1,211 @@
+{
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "home",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情页面",
+          "pathName": "pages/goods-details/index",
+          "query": "id= 6761",
+          "scene": null
+        },
+        {
+          "name": "砍价详情页面",
+          "pathName": "pages/goods-details/index",
+          "query": "id=6765",
+          "scene": null
+        },
+        {
+          "name": "砍价详情页面",
+          "pathName": "pages/goods-details/index",
+          "query": "id=6765&kjJoinUid=701677",
+          "scene": null
+        },
+        {
+          "name": "拼团",
+          "pathName": "pages/goods-details/index",
+          "query": "id=6761",
+          "scene": null
+        },
+        {
+          "name": "生成海报",
+          "pathName": "pages/goods-details/poster",
+          "query": "goodsid=6761",
+          "scene": null
+        },
+        {
+          "name": "分销中心",
+          "pathName": "pages/fx/apply-status",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "notice",
+          "pathName": "pages/notice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "带参数进首页",
+          "pathName": "pages/index/index",
+          "query": "a=1&b=2&c=3",
+          "scene": null
+        },
+        {
+          "name": "packageStreamMedia/pages/videoCall/videoCall",
+          "pathName": "packageStreamMedia/pages/videoCall/videoCall",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageStreamMedia/pages/live-anchor/index",
+          "pathName": "packageStreamMedia/pages/live-anchor/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageStreamMedia/pages/live-anchor/list",
+          "pathName": "packageStreamMedia/pages/live-anchor/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageStreamMedia/pages/live-client/list",
+          "pathName": "packageStreamMedia/pages/live-client/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageStreamMedia/pages/live-client/client",
+          "pathName": "packageStreamMedia/pages/live-client/client",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/list-vop",
+          "pathName": "pages/goods/list-vop",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/idCheck/index",
+          "pathName": "pages/idCheck/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order-list/index",
+          "pathName": "pages/order-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/to-pay-order/index",
+          "pathName": "pages/to-pay-order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/center/center",
+          "pathName": "pages/center/center",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/credits/credits",
+          "pathName": "pages/credits/credits",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/resume/resume",
+          "pathName": "pages/resume/resume",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/page/article",
+          "pathName": "pages/page/article",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods-details/index",
+          "pathName": "pages/goods-details/index",
+          "query": "id=829594",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article",
+          "pathName": "pages/article/article",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/fav",
+          "pathName": "pages/goods/fav",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/start/start",
+          "pathName": "pages/start/start",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupons2/index",
+          "pathName": "pages/coupons2/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupons3/index",
+          "pathName": "pages/coupons3/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupons/index",
+          "pathName": "pages/coupons/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article",
+          "pathName": "pages/article/article",
+          "query": "id=136274",
+          "scene": null
+        },
+        {
+          "name": "pages/start/start",
+          "pathName": "pages/start/start",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "snowpy"
+}

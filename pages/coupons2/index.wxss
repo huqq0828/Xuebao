@@ -1,0 +1,20 @@
+.tab{
+  position: relative;
+}
+/*雪场*/
+.article-item {
+  padding-left: 15rpx;
+  height: 240rpx;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 3px 0px 5px -5px black, -3px 0px 5px -5px black;
+  border-top:4rpx solid #dddddd;
+}
+
+.article-item .article-cover {
+  width: 713rpx;
+  height: 197rpx;
+  position: relative;
+  top:20rpx;
+  border-radius: 5%;
+}

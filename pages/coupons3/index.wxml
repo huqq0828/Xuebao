@@ -1,0 +1,13 @@
+<!-- 搜索框 开始 -->
+<van-search value="{{ name }}" placeholder="搜索" shape="round" bind:search="bindconfirm" />
+<!-- 开始 -->
+  <view class="filters" style="position: relative; left: 0rpx; top: 33rpx">
+    <view class="item {{orderBy=='addedDown'?'active':''}}" data-val="addedDown" bindtap="filter" >推荐</view>
+    <view class="item {{orderBy=='ordersDown'?'active':''}}" data-val="ordersDown" bindtap="filter" >关注</view>
+    <view class="item {{orderBy=='priceUp'?'active':''}}" data-val="priceUp" bindtap="filter" >好友</view>
+    <view class="item2 {{orderBy=='priceUp1'?'active':''}}" data-val="priceUp1" bindtap="filter" >消息</view>
+  </view>
+  <image class="img" src="https://6875-huqq-4grafodl1eec3739-1304293882.tcb.qcloud.la/3%E7%A4%BE%E4%BA%A4.png?sign=c83200bf4eac1a4e97d47555faf93ad5&t=1645541351"></image>
+
+
+

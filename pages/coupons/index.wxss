@@ -1,0 +1,183 @@
+.tab{
+  position: relative;
+}
+.coupons {
+  display:flex;
+  justify-content:space-between;
+  border-radius: 8rpx;
+  margin-left: 24rpx;
+  position: relative;
+}
+.coupons2 {
+  box-shadow: 0 0 16rpx 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8rpx;
+  width: 700rpx;
+}
+.coupons {
+  display:flex;
+  justify-content:space-between;
+  border-radius: 8rpx;
+  position: relative;
+}
+/* 轮播图*/
+.swiper-container{
+  width: 750rpx;
+  position: relative;  
+}
+.swiper-container .swiper1 {
+  width: 700rpx;
+  height: 440rpx;
+}
+.swiper-container .swiper1 image {
+  width: 700rpx;
+  height: 440rpx;
+}
+.weui-loadmore {
+  margin-bottom: 0rpx;
+}
+/*跳转2*/
+.filters {
+  display: flex;
+  margin-bottom: 30rpx;
+  margin-top: 7rpx;
+  border-radius: 90rpx;
+  border-top: 3rpx inset #000;
+}
+.filters .item {
+  line-height: 98rpx;
+  font-size: 35rpx;
+  color: #747474 ;
+  margin-left: 35rpx;
+  margin-bottom: -10rpx;
+}
+.filters .active {
+  font-weight: 550;
+  font-size: 40rpx;
+  color: #3b98d9 ;
+  
+}
+/* 列表模块*/
+.container {
+  display:flex;
+  position: relative;
+  height: 1133rpx;
+}
+.goods-container{
+  display: flex;
+  justify-content: space-between;  
+  flex-wrap:wrap;
+  box-sizing: content-box;
+  padding: 24rpx;
+  position: relative;
+  top:-40rpx
+}
+.goods-box{
+  width: 339rpx;
+  overflow: hidden;
+  border-radius:5px;
+  margin-bottom: 20rpx;
+}
+.goods-box .img-box{
+  overflow: hidden;
+}
+.goods-box .goods-title2{
+  position: relative;
+  font-size: 30rpx;
+  color:#000;
+}
+.goods-box .goods-title{
+  display: flex;
+  float: left;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color:#000;
+}
+.i2 {
+  display: flex;
+  float: right;
+  width: 48rpx;
+  height: 48rpx;
+}
+.i1 {
+  display: flex;
+  float: left;
+  width: 48rpx;
+  height: 48rpx;
+}
+.u5{
+  width: 335rpx;
+  height: 440rpx;
+}
+.u1{
+  margin-top: 25rpx;
+  float: left;
+}
+
+/*雪场*/
+.article-item {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 3px 0px 5px -5px black, -3px 0px 5px -5px black;
+  border-top:4rpx solid #dddddd;
+}
+
+.article-item .article-cover {
+  width: 265rpx;
+  height: 240rpx;
+  float: left;
+  position: relative;
+  top:20rpx;
+  border-radius: 5%;
+}
+
+.article-item .article-info {
+  float: left;
+  position: relative;
+  top:8rpx;
+  left: 10rpx;
+}
+
+.article-info .description {
+  font-size: 32rpx;
+  font-weight: bold;
+  white-space: wrap;
+  overflow: hidden;
+  width: 127rpx;
+  padding: 10rpx;
+}
+.article-info .description2 {
+  font-size: 28rpx;
+  white-space: wrap;
+  overflow: hidden;
+  display: block;
+  width:446rpx;
+  padding-left: 10rpx;
+  padding-top: -20rpx;
+}
+.views {
+  text-align: right;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+  margin-top:-5rpx;
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+}
+
+.views image {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+  margin-top: 4rpx;
+  margin-right: 10rpx;
+}
+/*教练*/
+.description3{
+  font-size: 26rpx;
+  border-radius: 15%;
+  border:7rpx solid #72b4e3;
+  color: #72b4e3;
+}

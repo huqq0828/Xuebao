@@ -1,0 +1,13 @@
+@import '../common/index.wxss';
+.van-goods-action{position:fixed;
+  right:0;bottom:0;left:0;
+  display:-webkit-flex;
+  display:flex;
+  background:rgba(255, 255, 255, 0.7);
+  align-items:center;
+  height:var(--goods-action-height,50px);
+  border-top: #e0e0e0 2px solid;
+}
+.van-goods-action--safe{
+  padding-bottom:env(safe-area-inset-bottom)
+}

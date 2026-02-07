@@ -1,0 +1,70 @@
+<import src="/template/login/index.wxml" />
+  <scroll-view class="scroll-container" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" bindscroll="bindscroll">
+    <view class="swiper-container" id="swiper-container">
+      <swiper class="swiper_box" indicator-dots="true" indicator-active-color="#fff"
+        autoplay="{{!goodsDetail.basicInfo.videoId}}" circular>
+        <swiper-item wx:for="{{goodsDetail.pics}}" wx:key="id">
+          <image src="{{item.pic}}" class="slide-image" mode="aspectFill" lazy-load="true" />
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="goods-info">
+      <parser class="goods-title" html="{{goodsDetail.content}}" />
+    </view>
+    <!-- tab  -->
+
+  </scroll-view>
+<!-- 保存图片  -->
+<block wx:if="{{posterShow}}">
+  <view class="poster-mask"></view>
+  <view class="poster">
+    <canvas class="canvas" style="{{canvasstyle}}" canvas-id="firstCanvas"></canvas>
+  </view>
+  <view class="poster-btn">
+    <button type="primary" size="mini" bindtap='_saveToMobile'> 保存图片 </button>
+    <button type="warn" size="mini" bindtap='closePop'> 关闭 </button>
+  </view>
+</block>
+<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
+<!-- <float-menu />  -->
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<view wx:if="{{showposterImg}}" class="popup-mask"></view>
+<view wx:if="{{showposterImg}}" class="posterImg-box">
+  <image mode="widthFix" class="posterImg" src="{{posterImg}}"></image>
+  <view class="btn-create" bindtap="savePosterPic">保存到相册</view>
+</view>
+
+<van-popup show="{{ !hideShopPopup }}" round closeable position="bottom"
+  custom-style="padding-top:48rpx;max-height: 80%;" bind:close="closePopupTap">
+  <van-card centered price="{{ selectSizePrice }}"
+    origin-price="{{ selectSizePrice != selectSizePrice ? selectSizeOPrice : '' }}"
+    title="{{ goodsDetail.basicInfo.name }}" thumb="{{ skuGoodsPic }}" />
+  <view class="size-label-box">
+    <block wx:for="{{goodsDetail.properties}}" wx:for-item="property" wx:for-index="idx" wx:key="id">
+      <view class="label">{{property.name}}</view>8
+      <view class="label-item-box">
+        <view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{property.childsCurGoods}}" wx:key="id"
+          bindtap="labelItemTap" data-propertyindex="{{idx}}" data-propertychildindex="{{index}}">
+          {{item.name}}
+        </view>
+      </view>
+    </block>
+    <block wx:for="{{goodsAddition}}" wx:for-item="property" wx:for-index="idx" wx:key="id">
+      <view class="label">{{property.name}}</view>
+      <view class="label-item-box">
+        <view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{property.items}}" wx:key="id"
+          bindtap="labelItemTap2" data-propertyindex="{{idx}}" data-propertychildindex="{{index}}">
+          {{item.name}}
+        </view>
+      </view>
+    </block>
+  </view>
+  <van-cell title="购买数量">
+    <view>
+      <van-stepper value="{{ buyNumber }}" min="{{ buyNumMin }}" max="{{ buyNumMax }}" bind:change="stepChange" />
+    </view>
+  </van-cell>
+  <van-button wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar" type="danger" block>加入购物车</van-button>
+  <van-button wx:if="{{shopType =='tobuy' || shopType =='toPingtuan'}}" data-shopType="{{shopType}}" bindtap="buyNow"
+    type="danger" block>立即购买</van-button>
+</van-popup>
